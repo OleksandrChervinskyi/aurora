@@ -1,16 +1,24 @@
 import './App.scss';
-import {Header} from "./fetures/header";
-import {TopNote} from "./fetures/top-note";
-import {Offer} from "./fetures/offer";
+import {Header} from "./fetuares/header";
+import {TopNote} from "./fetuares/top-note";
+import {Offer} from "./fetuares/offer";
+import {Subscribe} from "./fetuares/subscribe";
+import {Footer} from "./fetuares/footer";
+import {useSelector} from "react-redux";
 
 function App() {
+    //Login status - auth or not
+    const {header: {loginStatus}} = useSelector(store => store)  // default false
+
     return (
         <div className={'App'}>
             <TopNote/>
-            <div className={'main-bg-wrap'}>
+            <div className={!loginStatus ? 'main-bg-wrap' : ''}>
                 <Header/>
                 <Offer/>
             </div>
+            <Subscribe/>
+            <Footer/>
         </div>
     );
 }

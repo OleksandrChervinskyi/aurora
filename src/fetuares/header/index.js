@@ -1,4 +1,3 @@
-import {TopNote} from "../top-note";
 import {Container, Row} from "react-bootstrap";
 import {Logo} from "./logo";
 import {Search} from "./search";

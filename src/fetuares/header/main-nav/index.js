@@ -1,12 +1,17 @@
 import React from 'react';
 import {Col, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 export const MainNav = () => {
+
+    //Login status - auth or not
+    const {header: {loginStatus}} = useSelector(store => store)  // default false
+
     return (
         <Row>
             <Col>
-                <div className={'main-nav'}>
+                <div className={!loginStatus ? 'main-nav' : 'main-nav login'}>
                     <Link to={'#'}>
                         what’s new
                     </Link>

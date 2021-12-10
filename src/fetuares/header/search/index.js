@@ -1,11 +1,16 @@
 import React, {useState} from 'react';
 import {Col} from "react-bootstrap";
 import icon from '../../../pictures/icons/Fill 1.png'
+import iconBlack from '../../../pictures/icons/Fill black.png'
 import {Link} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 export const Search = () => {
     // State
     const [inputValue, setInputValue] = useState('')
+
+    //Login status - auth or not
+    const {header: {loginStatus}} = useSelector(store => store)  // default false
 
     // Input handler
     const inputHandler = (e) => {
@@ -15,7 +20,7 @@ export const Search = () => {
 
     return (
         <Col md={6}>
-            <div className={'search'}>
+            <div className={!loginStatus ? 'search' : 'search login'}>
                 <input type={'text'}
                        name={'search'}
                        placeholder={'What are you looking for?'}
@@ -23,7 +28,8 @@ export const Search = () => {
                        onChange={inputHandler}
                 />
                 <Link to={'#'}>
-                    <img src={icon} alt="search-icon"/>
+                    {!loginStatus && <img src={icon} alt="search-icon"/>}
+                    {loginStatus && <img src={iconBlack} alt="search-icon"/>}
                 </Link>
             </div>
         </Col>

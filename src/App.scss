@@ -1,10 +1,12 @@
 $main-color: #000;
+$footer-font: 'Cormorant Garamond', serif;
 
 
 //Global
 .App {
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
+  font-weight: 400;
   color: $main-color;
   transition: .3s;
 
@@ -39,14 +41,15 @@ $main-color: #000;
 
   span {
     font-size: 10px;
-    font-weight: 400;
     margin-left: 6px;
   }
 }
 
+
 //Main background wrap
 .main-bg-wrap {
-  background-image: url("./pictures/bg/9193579.png");
+  background: url("./pictures/bg/9193579.png") 67% 0%;
+  background-size: cover;
 }
 
 //Header
@@ -60,6 +63,10 @@ $main-color: #000;
     color: #fff;
     letter-spacing: 0.95px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+    & .login {
+      color: #000;
+    }
   }
 
   // Search
@@ -72,7 +79,6 @@ $main-color: #000;
     border: none;
     border-radius: 3px;
     background-color: rgba(247, 247, 247, 0.24);
-    color: #fff;
 
     input {
       width: 95%;
@@ -86,6 +92,15 @@ $main-color: #000;
         letter-spacing: 0.8px;
       }
     }
+
+    &.login {
+      background-color: #F7F7F7;
+
+      input::placeholder {
+        color: #000
+      }
+
+    }
   }
 
   //  Sing in | Register
@@ -98,6 +113,10 @@ $main-color: #000;
     font-weight: 600;
     text-align: end;
 
+    &.login {
+      color: #000;
+    }
+
     span {
       margin: 0 8px;
     }
@@ -107,11 +126,25 @@ $main-color: #000;
       height: 24px;
       margin-left: 17px;
     }
+
+    .cart-count {
+      display: flex;
+      margin: 0 0 0 8px;
+      padding-top: 2px;
+      background-color: #F2DA91;;
+      width: 22px;
+      height: 22px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 600;
+    }
   }
 
   //  Main Nav
   .main-nav {
-    margin: 24px auto 0;
+    margin: 24px auto 15px;
     max-width: 640px;
     display: flex;
     justify-content: space-between;
@@ -122,6 +155,10 @@ $main-color: #000;
       font-weight: 600;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
       text-transform: uppercase;
+    }
+
+    &.login a {
+      color: #000;
     }
   }
 }
@@ -135,4 +172,87 @@ $main-color: #000;
     text-align: center;
     padding: 180px 0 240px;
   }
+
+  &.offer-bg {
+    background-image: url("./pictures/bg/hp-oh-hi.png");
+    background-size: cover;
+  }
 }
+
+// Subscribe
+.subscribe {
+  padding: 32px 0;
+  max-width: 439px;
+  margin: 0 auto;
+  font-size: 12px;
+  letter-spacing: 0.872727px;
+
+  p {
+    margin-bottom: 14px;
+  }
+}
+
+// Subscribe from
+.subscribe-form {
+  display: flex;
+
+  input {
+    padding: 8px 11px 7px;
+    width: 100%;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    color: #4A4A4A;
+    border: 1px solid #E1E0E1;
+    border-radius: 3px;
+  }
+
+  button {
+    margin-left: 12px;
+    padding: 5px 20px 7px;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+// Footer
+.footer {
+  padding: 26px 0 18px;
+  background-color: #F7F7F7;
+
+  h5 {
+    font-family: $footer-font;
+    font-size: 16px;
+    letter-spacing: 1.16px;
+    margin-bottom: 17px;
+  }
+
+  .last {
+    max-width: 140px;
+  }
+
+  p a {
+    letter-spacing: 0.1px;
+    line-height: 19px;
+    margin-bottom: 7px;
+  }
+
+  .social-media {
+    img {
+      margin-right: 16px;
+    }
+  }
+
+  .copyright {
+    margin-top: 38px;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+}
+
+
