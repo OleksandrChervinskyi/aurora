@@ -73,7 +73,7 @@ $footer-font: 'Cormorant Garamond', serif;
   .search {
     display: flex;
     justify-content: center;
-    width: 580px;
+    max-width: 580px;
     padding: 16px;
     margin: 0 auto;
     border: none;
@@ -93,6 +93,7 @@ $footer-font: 'Cormorant Garamond', serif;
       }
     }
 
+    // Search login(registered) mode
     &.login {
       background-color: #F7F7F7;
 
@@ -101,6 +102,22 @@ $footer-font: 'Cormorant Garamond', serif;
       }
 
     }
+  }
+
+
+  //Cart Count '99'
+  .cart-count {
+    display: flex;
+    margin: 0 0 0 8px;
+    padding-top: 2px;
+    background-color: #F2DA91;;
+    width: 22px;
+    height: 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 600;
   }
 
   //  Sing in | Register
@@ -113,6 +130,7 @@ $footer-font: 'Cormorant Garamond', serif;
     font-weight: 600;
     text-align: end;
 
+    // Login(registered) mode
     &.login {
       color: #000;
     }
@@ -125,20 +143,6 @@ $footer-font: 'Cormorant Garamond', serif;
       width: 24px;
       height: 24px;
       margin-left: 17px;
-    }
-
-    .cart-count {
-      display: flex;
-      margin: 0 0 0 8px;
-      padding-top: 2px;
-      background-color: #F2DA91;;
-      width: 22px;
-      height: 22px;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      font-size: 11px;
-      font-weight: 600;
     }
   }
 
@@ -157,6 +161,7 @@ $footer-font: 'Cormorant Garamond', serif;
       text-transform: uppercase;
     }
 
+    // Login(registered) mode
     &.login a {
       color: #000;
     }
@@ -173,6 +178,7 @@ $footer-font: 'Cormorant Garamond', serif;
     padding: 180px 0 240px;
   }
 
+  // Login(registered) mode
   &.offer-bg {
     background-image: url("./pictures/bg/hp-oh-hi.png");
     background-size: cover;
@@ -254,5 +260,82 @@ $footer-font: 'Cormorant Garamond', serif;
     letter-spacing: 0.5px;
   }
 }
+
+//-----Mobile version-----
+//Header
+.header {
+
+  //Hamburger
+  .hamburger {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+    }
+
+    &:before {
+      top: 7px;
+    }
+  ;
+
+    &:after {
+      bottom: 7px;
+    }
+  }
+
+  .cart-icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+//--------MEDIA--------
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+  //  Footer
+  .footer {
+    .footer__col {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .last {
+      max-width: 100%;
+    }
+  }
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  //Header
+  .header {
+    padding-top: 17px;
+  }
+
+  // Offer
+  .offer {
+    h1 {
+      opacity: 0;
+    }
+  }
+}
+
 
 

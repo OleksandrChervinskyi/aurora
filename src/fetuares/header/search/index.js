@@ -19,7 +19,7 @@ export const Search = () => {
     }
 
     return (
-        <Col md={6}>
+        <Col sm={8} md={6} className={'d-none d-sm-block'}>
             <div className={!loginStatus ? 'search' : 'search login'}>
                 <input type={'text'}
                        name={'search'}

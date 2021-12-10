@@ -5,27 +5,29 @@ import {Link} from "react-router-dom";
 
 export const TopNote = () => {
     return (
-        <Container fluid>
-            <div className={'top-note'}>
-                <Row>
-                    <Col md={11}>
-                        <p>
-                            We deliver Worldwide
-                        </p>
-                    </Col>
-                    <Col md={1}>
-                        <p>
-                            <Link to={'#'}>
-                                <img src={icon1} alt="geo-icon"/>
-                                <span>
+        <div className={'d-none d-sm-block'}>
+            <Container fluid>
+                <div className={'top-note'}>
+                    <Row>
+                        <Col sm={9} md={10} xl={11}>
+                            <p>
+                                We deliver Worldwide
+                            </p>
+                        </Col>
+                        <Col sm={3} md={2} xl={1} className={'text-end'}>
+                            <p>
+                                <Link to={'#'}>
+                                    <img src={icon1} alt="geo-icon"/>
+                                    <span>
                                     Our stores
                                </span>
-                            </Link>
-                        </p>
-                    </Col>
-                </Row>
-            </div>
-        </Container>
+                                </Link>
+                            </p>
+                        </Col>
+                    </Row>
+                </div>
+            </Container>
+        </div>
     );
 };
 

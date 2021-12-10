@@ -12,7 +12,7 @@ export const Footer = () => {
         <footer className={'footer'}>
             <Container>
                 <Row>
-                    <Col md={{span: 2, offset: 1}}>
+                    <Col sm={6} lg={{span: 2, offset: 1}}>
                         <div className={'footer__col'}>
                             <h5>
                                 <Link to={'#'}>
@@ -36,7 +36,7 @@ export const Footer = () => {
                             </p>
                         </div>
                     </Col>
-                    <Col md={2}>
+                    <Col sm={6} lg={2}>
                         <div className={'footer__col'}>
                             <h5>
                                 <Link to={'#'}>
@@ -60,7 +60,7 @@ export const Footer = () => {
                             </p>
                         </div>
                     </Col>
-                    <Col md={2}>
+                    <Col sm={6} lg={2}>
                         <div className={'footer__col'}>
                             <h5>
                                 <Link to={'#'}>
@@ -84,7 +84,7 @@ export const Footer = () => {
                             </p>
                         </div>
                     </Col>
-                    <Col md={2}>
+                    <Col sm={6} lg={2}>
                         <div className={'footer__col'}>
                             <h5 className={'last'}>
                                 <Link to={'#'}>
@@ -103,7 +103,7 @@ export const Footer = () => {
                             </p>
                         </div>
                     </Col>
-                    <Col md={2}>
+                    <Col lg={2} className={'text-sm-center text-lg-start'}>
                         <h5>
                             <Link to={'#'}>
                                 Social

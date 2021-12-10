@@ -10,7 +10,7 @@ export const MainNav = () => {
 
     return (
         <Row>
-            <Col>
+            <Col className={'d-none d-sm-block'}>
                 <div className={!loginStatus ? 'main-nav' : 'main-nav login'}>
                     <Link to={'#'}>
                         what’s new

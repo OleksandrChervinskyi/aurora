@@ -8,7 +8,7 @@ export const Logo = () => {
     const {header: {loginStatus}} = useSelector(store => store)  // default false
 
     return (
-        <Col md={3}>
+        <Col xs={8} sm={4} md={3} className={'text-center'}>
             <div className={'logo'}>
                 <Link to={'#'}>
                     <p className={loginStatus ? 'login' : ''}>
