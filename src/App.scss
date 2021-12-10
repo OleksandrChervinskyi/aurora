@@ -1,0 +1,138 @@
+$main-color: #000;
+
+
+//Global
+.App {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: $main-color;
+  transition: .3s;
+
+  p, h1, h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover, &:focus, &:active {
+      color: inherit;
+    }
+  }
+
+  input {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+//Top Note
+.top-note {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 0 3px;
+  text-align: center;
+
+  span {
+    font-size: 10px;
+    font-weight: 400;
+    margin-left: 6px;
+  }
+}
+
+//Main background wrap
+.main-bg-wrap {
+  background-image: url("./pictures/bg/9193579.png");
+}
+
+//Header
+.header {
+  padding-top: 24px;
+
+  //  Logo
+  .logo {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.95px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  // Search
+  .search {
+    display: flex;
+    justify-content: center;
+    width: 580px;
+    padding: 16px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(247, 247, 247, 0.24);
+    color: #fff;
+
+    input {
+      width: 95%;
+      background-color: transparent;
+      border: none;
+
+      &::placeholder {
+        color: #fff;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+      }
+    }
+  }
+
+  //  Sing in | Register
+  .sing-in {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: end;
+
+    span {
+      margin: 0 8px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-left: 17px;
+    }
+  }
+
+  //  Main Nav
+  .main-nav {
+    margin: 24px auto 0;
+    max-width: 640px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Offer
+.offer {
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 180px 0 240px;
+  }
+}
