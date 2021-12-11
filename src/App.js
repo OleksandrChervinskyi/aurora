@@ -12,7 +12,6 @@ function App() {
 
     return (
         <div className={'App'}>
-            <TopNote/>
             <div className={!loginStatus ? 'main-bg-wrap' : ''}>
                 <Header/>
                 <Offer/>
