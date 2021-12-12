@@ -1,5 +1,5 @@
 import React from 'react';
-import {offLoginStatus, onLoginStatus} from "../../headerSlice";
+import {onLoginStatus} from "../../headerSlice";
 import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
 

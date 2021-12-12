@@ -1,10 +1,10 @@
 import './App.scss';
 import {Header} from "./fetuares/header";
-import {TopNote} from "./fetuares/top-note";
 import {Offer} from "./fetuares/offer";
 import {Subscribe} from "./fetuares/subscribe";
 import {Footer} from "./fetuares/footer";
 import {useSelector} from "react-redux";
+import {NavBar} from "./fetuares/navBar";
 
 function App() {
     //Login status - auth or not
@@ -18,6 +18,7 @@ function App() {
             </div>
             <Subscribe/>
             <Footer/>
+            <NavBar/>
         </div>
     );
 }

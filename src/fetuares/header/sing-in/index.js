@@ -5,7 +5,6 @@ import {Unregistered} from "./unregistered";
 import {Registered} from "./registered";
 
 import basket from '../../../pictures/icons/basket.png'
-import basketBlack from '../../../pictures/icons/basket-black.png'
 
 
 export const SingIn = () => {
