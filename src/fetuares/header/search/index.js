@@ -9,8 +9,8 @@ export const Search = () => {
     // State
     const [inputValue, setInputValue] = useState('')
 
-    //Login status - auth or not
-    const {header: {loginStatus}} = useSelector(store => store)  // default false
+    //Login status - auth or not and Scroll position
+    const {header: {loginStatus, searchInputMob, scrollPosition}} = useSelector(store => store)
 
     // Input handler
     const inputHandler = (e) => {
@@ -19,8 +19,9 @@ export const Search = () => {
     }
 
     return (
-        <Col sm={8} md={6} className={'d-none d-sm-block'}>
-            <div className={!loginStatus ? 'search' : 'search login'}>
+        <Col sm={8} md={6} className={!searchInputMob ? 'd-none d-sm-block' : 'd-block'}>
+            <div
+                className={(!loginStatus && scrollPosition) || (loginStatus && scrollPosition) ? 'search black' : 'search'}>
                 <input type={'text'}
                        name={'search'}
                        placeholder={'What are you looking for?'}
@@ -28,8 +29,9 @@ export const Search = () => {
                        onChange={inputHandler}
                 />
                 <Link to={'#'}>
-                    {!loginStatus && <img src={icon} alt="search-icon"/>}
-                    {loginStatus && <img src={iconBlack} alt="search-icon"/>}
+                    {scrollPosition ? <img src={iconBlack} alt="search-icon"/> : <img src={icon} alt="search-icon"/>}
+                    {/*{!loginStatus && <img src={icon} alt="search-icon"/>}*/}
+                    {/*{loginStatus && <img src={iconBlack} alt="search-icon"/>}*/}
                 </Link>
             </div>
         </Col>

@@ -5,13 +5,14 @@ import {useSelector} from "react-redux";
 
 export const MainNav = () => {
 
-    //Login status - auth or not
-    const {header: {loginStatus}} = useSelector(store => store)  // default false
+    //Login status - auth or not + Scroll position
+    const {header: {loginStatus, scrollPosition}} = useSelector(store => store)
 
     return (
         <Row>
             <Col className={'d-none d-sm-block'}>
-                <div className={!loginStatus ? 'main-nav' : 'main-nav login'}>
+                <div
+                    className={(!loginStatus && scrollPosition) || (loginStatus && scrollPosition) ? 'main-nav black' : 'main-nav'}>
                     <Link to={'#'}>
                         what’s new
                     </Link>

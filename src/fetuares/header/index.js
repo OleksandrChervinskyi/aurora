@@ -6,13 +6,33 @@ import {MainNav} from "./main-nav";
 import {HamburgerIcon} from "./mobile-version/hamburger-icon";
 import {SearchIcon} from "./mobile-version/search-icon";
 import {CartIcon} from "./mobile-version/cart-icon";
-import {TopNote} from "../top-note";
+import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {setScrollPosition} from "./headerSlice";
 
 export const Header = () => {
+
+    //Dispatch
+    const dispatch = useDispatch()
+
+    //Scroll position for hover effect (add class)
+    const {header: {scrollPosition}} = useSelector(store => store)
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        dispatch(setScrollPosition(position))
+    };
+
+    //Scroll tracking
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <header className={'header'}>
-            <Container fluid className={'position-fixed'}>
-                <TopNote/>
+        <header className={!scrollPosition ? 'header fixed-top' : 'header fixed-top scroll-header'}>
+            <Container fluid>
                 <Row className={'align-items-center'}>
                     {/*Extra mobile components*/}
                     <HamburgerIcon/>

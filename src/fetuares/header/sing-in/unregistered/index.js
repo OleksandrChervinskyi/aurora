@@ -10,7 +10,7 @@ export const Unregistered = () => {
 
     return (
         <>
-            <p onClick={() => dispatch(onLoginStatus())}>
+            <p>
                 <Link to={'#'}>
                     Sing In
                 </Link>

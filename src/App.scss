@@ -28,11 +28,16 @@ $footer-font: 'Cormorant Garamond', serif;
       outline: none;
     }
   }
+
+  .black {
+    color: #000;
+  }
 }
 
 
 //Top Note
 .top-note {
+  background-color: #fff;
   font-size: 11px;
   font-weight: 500;
   padding: 4px 0 3px;
@@ -53,7 +58,8 @@ $footer-font: 'Cormorant Garamond', serif;
 
 //Header
 .header {
-
+  margin-top: 24px;
+  padding-top: 24px;
 
   //  Logo
   .logo {
@@ -62,10 +68,6 @@ $footer-font: 'Cormorant Garamond', serif;
     color: #fff;
     letter-spacing: 0.95px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-
-    & .login {
-      color: #000;
-    }
   }
 
   // Search
@@ -92,8 +94,14 @@ $footer-font: 'Cormorant Garamond', serif;
       }
     }
 
+    .black {
+      &::placeholder {
+        color: #000;
+      }
+    }
+
     // Search login(registered) mode
-    &.login {
+    &.black {
       background-color: #F7F7F7;
 
       input::placeholder {
@@ -130,7 +138,7 @@ $footer-font: 'Cormorant Garamond', serif;
     text-align: end;
 
     // Login(registered) mode
-    &.login {
+    &.black {
       color: #000;
     }
 
@@ -160,11 +168,15 @@ $footer-font: 'Cormorant Garamond', serif;
       text-transform: uppercase;
     }
 
-    // Login(registered) mode
-    &.login a {
+    &.black a {
       color: #000;
     }
   }
+}
+
+// Scrolled header
+.scroll-header {
+  background-color: #fff;
 }
 
 // Offer
@@ -469,6 +481,7 @@ $footer-font: 'Cormorant Garamond', serif;
   //Header
   .header {
     padding-top: 17px;
+    margin-top: 0;
   }
 
 

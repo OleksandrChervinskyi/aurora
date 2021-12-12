@@ -6,13 +6,12 @@ const HeaderSlice = createSlice({
         loginStatus: false,
         cartCount: '99',
         hamburgerMenuToggle: false,
+        searchInputMob: false,
+        scrollPosition: 0,
     },
     reducers: {
-        onLoginStatus(state) {
-            state.loginStatus = true
-        },
-        offLoginStatus(state) {
-            state.loginStatus = false
+        setLoginStatus(state) {
+            state.loginStatus = !state.loginStatus
         },
         hamburgerMenuOn(state) {
             state.hamburgerMenuToggle = true
@@ -20,8 +19,21 @@ const HeaderSlice = createSlice({
         hamburgerMenuOff(state) {
             state.hamburgerMenuToggle = false
         },
+        searchInputMobToggle(state) {
+            state.searchInputMob = !state.searchInputMob
+        },
+        setScrollPosition(state, actions) {
+            state.scrollPosition = actions.payload
+        }
+
     }
 })
 
-export const {offLoginStatus, onLoginStatus, hamburgerMenuOff,hamburgerMenuOn} = HeaderSlice.actions
+export const {
+    setLoginStatus,
+    hamburgerMenuOff,
+    hamburgerMenuOn,
+    searchInputMobToggle,
+    setScrollPosition
+} = HeaderSlice.actions
 export default HeaderSlice.reducer

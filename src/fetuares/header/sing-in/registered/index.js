@@ -1,6 +1,5 @@
 import React from 'react';
 import {useDispatch} from "react-redux";
-import {offLoginStatus} from "../../headerSlice";
 
 export const Registered = () => {
 
@@ -8,7 +7,7 @@ export const Registered = () => {
     const dispatch = useDispatch()
 
     return (
-        <p onClick={() => dispatch(offLoginStatus())}>
+        <p>
             Hi, Angels!
         </p>
     )

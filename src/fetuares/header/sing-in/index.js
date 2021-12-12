@@ -10,11 +10,13 @@ import basket from '../../../pictures/icons/basket.png'
 export const SingIn = () => {
 
     //Login status - auth or not + store
-    const {header: {loginStatus, cartCount}} = useSelector(store => store)
+    const {header: {loginStatus, cartCount, scrollPosition}} = useSelector(store => store)
+
 
     return (
         <Col md={3} className={'d-none d-md-block'}>
-            <div className={!loginStatus ? 'sing-in' : 'sing-in login'}>
+            <div
+                className={(!loginStatus && scrollPosition) || (loginStatus && scrollPosition) ? 'sing-in black' : 'sing-in'}>
                 {!loginStatus ? <Unregistered/> : <Registered/>}
                 <img src={basket} alt="cart-icon"/>
                 {loginStatus && <span className={'cart-count'}>{cartCount}</span>}

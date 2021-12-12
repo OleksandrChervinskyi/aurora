@@ -5,6 +5,7 @@ import {Subscribe} from "./fetuares/subscribe";
 import {Footer} from "./fetuares/footer";
 import {useSelector} from "react-redux";
 import {NavBar} from "./fetuares/navBar";
+import {TopNote} from "./fetuares/top-note";
 
 function App() {
     //Login status - auth or not
@@ -12,6 +13,7 @@ function App() {
 
     return (
         <div className={'App'}>
+            <TopNote/>
             <div className={!loginStatus ? 'main-bg-wrap' : ''}>
                 <Header/>
                 <Offer/>
