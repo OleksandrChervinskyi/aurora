@@ -6,17 +6,18 @@ import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
 
 export const Search = () => {
+
     // State
-    const [inputValue, setInputValue] = useState('')
+    const [inputValue, setInputValue] = useState('');
 
     //Login status - auth or not and Scroll position
-    const {header: {loginStatus, searchInputMob, scrollPosition}} = useSelector(store => store)
+    const {header: {loginStatus, searchInputMob, scrollPosition}} = useSelector(store => store);
 
     // Input handler
     const inputHandler = (e) => {
         const {target: {value}} = e
         setInputValue(value)
-    }
+    };
 
     return (
         <Col sm={8} md={6} className={!searchInputMob ? 'd-none d-sm-block' : 'd-block'}>

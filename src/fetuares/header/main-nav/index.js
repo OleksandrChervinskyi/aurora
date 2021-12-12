@@ -6,7 +6,7 @@ import {useSelector} from "react-redux";
 export const MainNav = () => {
 
     //Login status - auth or not + Scroll position
-    const {header: {loginStatus, scrollPosition}} = useSelector(store => store)
+    const {header: {loginStatus, scrollPosition}} = useSelector(store => store);
 
     return (
         <Row>

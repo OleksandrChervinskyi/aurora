@@ -10,6 +10,6 @@ export const Location = ({level2Value}) => {
                 Our stores
             </p>
         </Link>
-    )
+    );
 };
 

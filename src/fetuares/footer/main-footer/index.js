@@ -1,11 +1,7 @@
 import React from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import insta from "../../../pictures/icons/insta.png";
-import twitter from "../../../pictures/icons/twitter.png";
-import snapchat from "../../../pictures/icons/snapchat.png";
-import facebook from "../../../pictures/icons/facebook.png";
-import youtube from "../../../pictures/icons/youtube.png";
+import {SocialMedia} from "../social-media";
 
 export const MainFooter = () => {
     return (
@@ -109,23 +105,7 @@ export const MainFooter = () => {
                                 Social
                             </Link>
                         </h5>
-                        <div className={'social-media'}>
-                            <Link to={'#'}>
-                                <img src={insta} alt="instagram-icon"/>
-                            </Link>
-                            <Link to={'#'}>
-                                <img src={twitter} alt="twitter-icon"/>
-                            </Link>
-                            <Link to={'#'}>
-                                <img src={snapchat} alt="snapchat-icon"/>
-                            </Link>
-                            <Link to={'#'}>
-                                <img src={facebook} alt="facebook-icon"/>
-                            </Link>
-                            <Link to={'#'}>
-                                <img src={youtube} alt="youtube-icon"/>
-                            </Link>
-                        </div>
+                        <SocialMedia/>
                     </Col>
                 </Row>
                 <Row>

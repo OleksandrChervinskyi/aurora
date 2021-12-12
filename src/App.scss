@@ -1,9 +1,11 @@
-$main-color: #000;
+$main-font: 'Poppins', sans-serif;
 $footer-font: 'Cormorant Garamond', serif;
+$main-color: #000;
+
 
 //Global
 .App {
-  font-family: 'Poppins', sans-serif;
+  font-family: $main-font;
   font-size: 12px;
   font-weight: 400;
   color: $main-color;
@@ -12,6 +14,10 @@ $footer-font: 'Cormorant Garamond', serif;
   p, h1, h2 {
     margin: 0;
     padding: 0;
+  }
+
+  a, button, input, p, h1, h5, span, div {
+    transition: .5s;
   }
 
   a {
@@ -47,35 +53,41 @@ $footer-font: 'Cormorant Garamond', serif;
     font-size: 10px;
     margin-left: 6px;
   }
+
+  .geo {
+    letter-spacing: .5px;
+  }
+
 }
 
 
 //Main background wrap
 .main-bg-wrap {
-  background: url("./pictures/bg/9193579.png") 67%;
+  background: url("./pictures/bg/9193579.png") 65% 24px;
   background-size: cover;
 }
+
 
 //Header
 .header {
   margin-top: 24px;
-  padding-top: 24px;
+  padding-top: 14px;
 
   //  Logo
   .logo {
-    font-size: 38px;
+    font-size: 37px;
     font-weight: 700;
     color: #fff;
-    letter-spacing: 0.95px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    margin-left: 10px;
   }
 
   // Search
   .search {
     display: flex;
     justify-content: center;
-    max-width: 580px;
-    padding: 16px;
+    max-width: 550px;
+    padding: 10px 16px;
     margin: 0 auto;
     border: none;
     border-radius: 3px;
@@ -107,7 +119,6 @@ $footer-font: 'Cormorant Garamond', serif;
       input::placeholder {
         color: #000
       }
-
     }
   }
 
@@ -125,6 +136,7 @@ $footer-font: 'Cormorant Garamond', serif;
     border-radius: 50%;
     font-size: 11px;
     font-weight: 600;
+    color: #000;
   }
 
   //  Sing in | Register
@@ -133,9 +145,12 @@ $footer-font: 'Cormorant Garamond', serif;
     justify-content: end;
     align-items: center;
     color: #fff;
-    font-size: 11px;
     font-weight: 600;
     text-align: end;
+
+    a:hover {
+      color: #dfbfb6;
+    }
 
     // Login(registered) mode
     &.black {
@@ -147,16 +162,16 @@ $footer-font: 'Cormorant Garamond', serif;
     }
 
     img {
-      width: 24px;
+      width: 18px;
       height: 24px;
-      margin-left: 17px;
+      margin: 0 15px 0 8px;
     }
   }
 
   //  Main Nav
   .main-nav {
-    margin: 24px auto 15px;
-    max-width: 640px;
+    margin: 21px auto 15px;
+    max-width: 604px;
     display: flex;
     justify-content: space-between;
 
@@ -166,6 +181,11 @@ $footer-font: 'Cormorant Garamond', serif;
       font-weight: 600;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
       text-transform: uppercase;
+
+      &:hover {
+        margin-top: 2px;
+        transition: .1s;
+      }
     }
 
     &.black a {
@@ -174,21 +194,23 @@ $footer-font: 'Cormorant Garamond', serif;
   }
 }
 
+
 // Scrolled header
 .scroll-header {
   background-color: #fff;
 }
+
 
 // Offer
 .offer {
   padding: 140px;
 
   h1 {
-    font-size: 60px;
+    font-size: 57px;
     font-weight: 700;
     color: #fff;
     text-align: center;
-    padding: 180px 0 240px;
+    padding: 192px 0 104px;
   }
 
   // Login(registered) mode
@@ -198,16 +220,17 @@ $footer-font: 'Cormorant Garamond', serif;
   }
 }
 
+
 // Subscribe
 .subscribe {
-  padding: 32px 0;
+  padding: 30px 0;
   max-width: 439px;
   margin: 0 auto;
   font-size: 12px;
   letter-spacing: 0.872727px;
 
   p {
-    margin-bottom: 14px;
+    margin-bottom: 11px;
   }
 }
 
@@ -235,12 +258,18 @@ $footer-font: 'Cormorant Garamond', serif;
     font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
   }
 }
 
+
 // Footer
 .footer {
-  padding: 26px 0 18px;
+  padding: 23px 0 18px;
   background-color: #F7F7F7;
 
   h5 {
@@ -248,6 +277,10 @@ $footer-font: 'Cormorant Garamond', serif;
     font-size: 16px;
     letter-spacing: 1.16px;
     margin-bottom: 17px;
+
+    &:hover {
+      opacity: .5;
+    }
   }
 
   .last {
@@ -258,11 +291,19 @@ $footer-font: 'Cormorant Garamond', serif;
     letter-spacing: 0.1px;
     line-height: 19px;
     margin-bottom: 7px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .social-media {
     img {
       margin-right: 16px;
+
+      &:hover {
+        margin-top: 2px;
+      }
     }
   }
 
@@ -275,7 +316,7 @@ $footer-font: 'Cormorant Garamond', serif;
 }
 
 
-//-----Mobile version-----
+//--------Mobile version--------//
 //Header
 .header {
 
@@ -294,10 +335,17 @@ $footer-font: 'Cormorant Garamond', serif;
       background-color: #fff;
     }
 
+    &.black {
+      background-color: #000;
+
+      &:before, &:after {
+        background-color: #000;
+      }
+    }
+
     &:before {
       top: 7px;
     }
-  ;
 
     &:after {
       bottom: 7px;
@@ -309,6 +357,7 @@ $footer-font: 'Cormorant Garamond', serif;
     align-items: center;
   }
 }
+
 
 // Nav-Bar (mobile)
 .nav-bar {
@@ -376,6 +425,7 @@ $footer-font: 'Cormorant Garamond', serif;
           font-size: 16px;
 
           img {
+            position: static;
             margin: 0 16px 0 -16px;
           }
         }
@@ -392,7 +442,6 @@ $footer-font: 'Cormorant Garamond', serif;
       }
 
       .body {
-
         .item-level2 {
           display: flex;
           justify-content: space-between;
@@ -447,10 +496,9 @@ $footer-font: 'Cormorant Garamond', serif;
       margin: 0 10px 0 -10px;
     }
   }
-
 }
 
-//--------MEDIA--------
+//-----------MEDIA-----------//
 /*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) {
   //  Footer
@@ -466,24 +514,27 @@ $footer-font: 'Cormorant Garamond', serif;
   }
 }
 
-/*Medium devices (tablets, less than 992px)*/
-@media (max-width: 991.98px) {
-
-}
-
-/*Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) {
-
-}
-
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
   //Header
   .header {
     padding-top: 17px;
     margin-top: 0;
+
+    .logo {
+      text-align: center;
+    }
+
+    .search {
+      margin-bottom: 15px;
+    }
   }
 
+  //Main background wrap
+  .main-bg-wrap {
+    background: url("./pictures/bg/9193579.png") 65% 0px;
+    background-size: cover;
+  }
 
   // Offer
   .offer {
@@ -568,6 +619,13 @@ $footer-font: 'Cormorant Garamond', serif;
       margin-top: 17px;
       font-size: 9px;
     }
+  }
+}
+
+/*Custom devices*/
+@media (max-width: 405px) {
+  .header {
+    max-width: 95%;
   }
 }
 

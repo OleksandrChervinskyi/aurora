@@ -9,7 +9,7 @@ export const SubscribeForm = () => {
     const inputHandler = (e) => {
         const {target: {value}} = e
         setInputValue(value)
-    }
+    };
 
     return (
         <div className={'subscribe-form'}>

@@ -12,29 +12,29 @@ import {hamburgerMenuOff} from "../header/headerSlice";
 export const NavBar = () => {
 
     //Array of level 1-2-3 categories
-    const categoriesLevel0 = ['Women', 'Men', 'Accessories', 'Kids', 'Beauty', 'Outlet', 'Stories']
-    const categoriesLevel1 = ['Clothing', 'Collections', 'Collabs', 'Brands']
-    const categoriesLastLevel = ['T-shirts', 'Sweatshirts', 'Knitwear', 'Jeans', 'Jumpsuits', 'Skirts', 'Dresses']
+    const categoriesLevel0 = ['Women', 'Men', 'Accessories', 'Kids', 'Beauty', 'Outlet', 'Stories'];
+    const categoriesLevel1 = ['Clothing', 'Collections', 'Collabs', 'Brands'];
+    const categoriesLastLevel = ['T-shirts', 'Sweatshirts', 'Knitwear', 'Jeans', 'Jumpsuits', 'Skirts', 'Dresses'];
 
     // Hamburger menu status
-    const {header: {hamburgerMenuToggle}} = useSelector(store => store)
+    const {header: {hamburgerMenuToggle}} = useSelector(store => store);
 
     // Selected menu item
     const [selectedItems, setSelectedItems] = useState({
         level1: '',
         level2: '',
-    })
+    });
 
     //Switch between lists in menu
     const chooseItemLevel1 = (e) => {
         setSelectedItems({...selectedItems, level1: e.target.textContent})
-    }
+    };
     const chooseItemLevel2 = (e) => {
         setSelectedItems({...selectedItems, level2: e.target.textContent})
-    }
+    };
 
     //Dispatch
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     return (
         <div className={!hamburgerMenuToggle ? 'nav-bar d-none' : 'nav-bar d-block'}>
@@ -67,7 +67,6 @@ export const NavBar = () => {
                                 .map(value => <Level2MenuList
                                     key={value}
                                     item={value}
-                                    chooseItemLevel1={chooseItemLevel1}
                                     chooseItemLevel2={chooseItemLevel2}/>)
                             }
                         </div>
@@ -78,7 +77,7 @@ export const NavBar = () => {
                     <div className={'menu_levels'}>
                         <div className={'header'}>
                             <h3>
-                                <img src={arrowLeft} alt="arrow"
+                                <img src={arrowLeft} alt="arrow" className={'last-arrow'}
                                      onClick={() => setSelectedItems({...selectedItems, level2: ''})}/>
                                 {selectedItems.level2}
                             </h3>
@@ -88,16 +87,15 @@ export const NavBar = () => {
                         </div>
                         <div className={'body'}>
                             {categoriesLastLevel
-                                .map(value => <LastLevel
-                                    key={value}
-                                    item={value}
-                                    chooseItemLevel1={chooseItemLevel1}
-                                    chooseItemLevel2={chooseItemLevel2}/>)
+                                .map(value =>
+                                    <LastLevel
+                                        key={value}
+                                        item={value}
+                                    />)
                             }
                         </div>
                     </div>}
             </div>
-
             {/*Location line*/}
             <SingInLine/>
             {selectedItems.level1 && <Location level2Value={selectedItems.level2}/>}

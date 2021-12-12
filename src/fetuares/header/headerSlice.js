@@ -24,10 +24,9 @@ const HeaderSlice = createSlice({
         },
         setScrollPosition(state, actions) {
             state.scrollPosition = actions.payload
-        }
-
+        },
     }
-})
+});
 
 export const {
     setLoginStatus,
@@ -36,4 +35,5 @@ export const {
     searchInputMobToggle,
     setScrollPosition
 } = HeaderSlice.actions
+
 export default HeaderSlice.reducer

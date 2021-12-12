@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 export const CartIcon = () => {
 
     //Store
-    const {header: {cartCount, loginStatus, scrollPosition}} = useSelector(store => store)
+    const {header: {cartCount, loginStatus, scrollPosition}} = useSelector(store => store);
 
     return (
         <Col xs={2} className={'d-sm-none'}>

@@ -1,6 +1,6 @@
 import arrowRight from "../../../pictures/icons/Chevron Right.png";
 
-export const Level2MenuList = ({item, chooseItemLevel2, chooseItemLevel1}) => {
+export const Level2MenuList = ({item, chooseItemLevel2}) => {
     return (
         <p onClick={chooseItemLevel2} className={'item-level2'}>
             {item}

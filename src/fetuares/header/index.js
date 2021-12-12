@@ -13,10 +13,10 @@ import {setScrollPosition} from "./headerSlice";
 export const Header = () => {
 
     //Dispatch
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     //Scroll position for hover effect (add class)
-    const {header: {scrollPosition}} = useSelector(store => store)
+    const {header: {scrollPosition, hamburgerMenuToggle}} = useSelector(store => store);
     const handleScroll = () => {
         const position = window.pageYOffset;
         dispatch(setScrollPosition(position))
@@ -31,22 +31,25 @@ export const Header = () => {
     }, []);
 
     return (
-        <header className={!scrollPosition ? 'header fixed-top' : 'header fixed-top scroll-header'}>
-            <Container fluid>
-                <Row className={'align-items-center'}>
-                    {/*Extra mobile components*/}
-                    <HamburgerIcon/>
-                    <SearchIcon/>
-                    {/*-----*/}
-                    <Logo/>
-                    {/*Extra mobile components*/}
-                    <CartIcon/>
-                    {/*-----*/}
-                    <Search/>
-                    <SingIn/>
-                </Row>
-                <MainNav/>
-            </Container>
-        </header>
-    )
-}
+        <>
+            {!hamburgerMenuToggle &&
+                <header className={!scrollPosition ? 'header fixed-top' : 'header fixed-top scroll-header'}>
+                    <Container fluid>
+                        <Row className={'align-items-center'}>
+                            {/*Extra mobile components*/}
+                            <HamburgerIcon/>
+                            <SearchIcon/>
+                            {/*-----*/}
+                            <Logo/>
+                            {/*Extra mobile components*/}
+                            <CartIcon/>
+                            {/*-----*/}
+                            <Search/>
+                            <SingIn/>
+                        </Row>
+                        <MainNav/>
+                    </Container>
+                </header>}
+        </>
+    );
+};

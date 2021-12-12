@@ -5,14 +5,15 @@ import {useDispatch, useSelector} from "react-redux";
 import {setLoginStatus} from "../headerSlice";
 
 export const Logo = () => {
+
     //Login status - auth or not + Scroll position
-    const {header: {loginStatus, scrollPosition}} = useSelector(store => store)
+    const {header: {loginStatus, scrollPosition}} = useSelector(store => store);
 
     //Dispatch
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     return (
-        <Col xs={8} sm={4} md={3} className={'text-center'}>
+        <Col xs={8} sm={4} md={3}>
             <div className={'logo'}>
                 <Link to={'#'}>
                     <p className={(!loginStatus && scrollPosition) || (loginStatus && scrollPosition) ? 'black' : ''}

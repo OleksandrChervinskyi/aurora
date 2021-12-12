@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 export const Offer = () => {
 
     //Login status - auth or not
-    const {header: {loginStatus}} = useSelector(store => store)  // default false
+    const {header: {loginStatus}} = useSelector(store => store);  // default false
 
     return (
         <section className={loginStatus ? 'offer offer-bg' : 'offer'}>

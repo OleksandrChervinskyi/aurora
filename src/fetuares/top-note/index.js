@@ -14,7 +14,7 @@ export const TopNote = () => {
                         </p>
                     </Col>
                     <Col sm={3} md={2} xl={1} className={'text-end'}>
-                        <p>
+                        <p className={'geo'}>
                             <Link to={'#'}>
                                 <img src={icon1} alt="geo-icon"/>
                                 <span>

@@ -8,8 +8,9 @@ import {NavBar} from "./fetuares/navBar";
 import {TopNote} from "./fetuares/top-note";
 
 function App() {
+
     //Login status - auth or not
-    const {header: {loginStatus}} = useSelector(store => store)  // default false
+    const {header: {loginStatus}} = useSelector(store => store);  // default false
 
     return (
         <div className={'App'}>
@@ -23,6 +24,6 @@ function App() {
             <NavBar/>
         </div>
     );
-}
+};
 
 export default App;
